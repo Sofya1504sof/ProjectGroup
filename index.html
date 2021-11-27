@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            visibility: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        h4 {
+            text-align: center
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+
+        th,
+        td {
+            padding: 8px 12px;
+            border: 1px solid black;
+        }
+
+        input {
+            outline: none;
+            border: none;
+        }
+
+        .grade {
+            width: 25px;
+            text-align: center;
+        }
+
+        .empty {
+            border: none;
+        }
+
+        .diagram-element {
+            height: 100px;
+            position: relative;
+            padding: 0;
+        }
+
+        .diagram-element img {
+            display: block;
+            transition: height 0.7s ease;
+        }
+
+        .button {
+            padding: 10px 15px;
+            background-color: transparent;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>Фамилия</td>
+                <td>Оценки</td>
+                <td>Категория</td>
+            </tr>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+
+        <h4>Диаграмма</h4>
+        <table class="digram">
+            <tr valign=bottom align="center">
+                <td class="diagram-element"><img src="./1.png" width="80" height="0"></td>
+                <td class="diagram-element"><img src="./1.png" width="80" height="0"></td>
+                <td class="diagram-element"><img src="./1.png" width="80" height="0"></td>
+                <td class="diagram-element"><img src="./1.png" width="80" height="0"></td>
+            </tr>
+            <tr>
+                <td height=40><small>Отличники</small></td>
+                <td height=40><small>Хорошо успевающие</small></td>
+                <td height=40><small>Успевающие</small></td>
+                <td height=40><small>Неуспевающие</small></td>
+            </tr>
+        </table>
+
+        <input class="button" type="button" value="Расчитать категории и создать диаграмму">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
